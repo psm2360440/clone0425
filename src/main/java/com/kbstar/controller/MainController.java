@@ -23,6 +23,12 @@ public class MainController {
         return "index";
     }
 
+    @RequestMapping("/dashboard")
+    public String dashboard(Model model){
+        model.addAttribute("contents", "contents");
+        return "index";
+    }
+
     @RequestMapping("/tables")
     public String tables(Model model){
         List<Item> list = new ArrayList<>();
